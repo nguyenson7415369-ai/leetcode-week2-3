@@ -1,0 +1,20 @@
+#include<iostream>
+#include<algorithm>
+#include<vector>
+using namespace std;
+class Solution {
+public:
+    int arrayPairSum(vector<int>& nums) {
+    	sort(nums.begin(),nums.end());
+    	int s=0;
+    	for(int i=0;i<nums.size();i+=2){
+    		s+=nums[i];
+		}
+    	return s;
+    }
+};
+int main(){
+	Solution sol;
+	vector<int> nums={6,2,6,5,1,2};
+	cout<<sol.arrayPairSum(nums);
+}
